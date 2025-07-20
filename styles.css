@@ -1,0 +1,144 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Inputs */
+form .input-group,
+form fieldset {
+  margin-bottom: 20px;
+}
+
+.input-group label,
+fieldset label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group select,
+fieldset input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Fieldset Styling */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+fieldset legend {
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background-color: #2d89e5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e6fc1;
+}
+
+/* Results */
+.results {
+  background-color: #eef2f5;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.results p {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+}
+
+.results .net {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #218739;
+}
+
+/* Ad Placeholders */
+.ad {
+  background-color: #dbe9ff;
+  color: #555;
+  padding: 20px;
+  text-align: center;
+  border: 1px dashed #aac;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Hide result until ready */
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .input-group label,
+  fieldset label {
+    font-size: 0.95rem;
+  }
+
+  input, select {
+    font-size: 0.95rem;
+  }
+
+  button[type="submit"] {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

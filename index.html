@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ✅ SEO Metadata -->
+  <title>Paycheck Calculator by State - Estimate Your Net Income</title>
+  <meta name="description" content="Accurately estimate your take-home pay with our free Paycheck Calculator. Choose your state, income type, filing status, and deductions. Mobile-friendly & accurate." />
+  <meta name="keywords" content="paycheck calculator, net income, salary calculator, paycheck estimator, take-home pay calculator, online tax tool" />
+  <meta name="author" content="Chris Elmhorst" />
+
+  <!-- ✅ Open Graph for social sharing -->
+  <meta property="og:title" content="Paycheck Calculator by State" />
+  <meta property="og:description" content="Free online paycheck calculator based on your state, deductions, and filing status. Estimate your take-home pay easily." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Paycheck Calculator by State" />
+  <meta name="twitter:description" content="Free paycheck calculator that estimates your net pay by state, deductions, and filing status." />
+  <meta name="twitter:image" content="https://yourdomain.com/preview.jpg" />
+
+  <!-- ✅ Favicon (Optional) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- ✅ CSS LINK — Don’t remove this! -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Paycheck Calculator</h1>
+
+    <div class="ad ad-top">[AdSense Placeholder - Top Banner]</div>
+
+    <form id="paycheck-form">
+      <div class="input-group">
+        <label for="state">State:</label>
+        <select id="state" required>
+          <option value="">Select State</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="payType">Pay Type:</label>
+        <select id="payType" required>
+          <option value="hourly">Hourly</option>
+          <option value="salary">Salary</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="frequency">Pay Frequency:</label>
+        <select id="frequency" required>
+          <option value="weekly">Weekly</option>
+          <option value="biweekly">Bi-weekly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="filingStatus">Filing Status:</label>
+        <select id="filingStatus" required>
+          <option value="single">Single</option>
+          <option value="married_joint">Married Filing Jointly</option>
+          <option value="married_separate">Married Filing Separately</option>
+          <option value="head_household">Head of Household</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="dependents">Dependents:</label>
+        <input type="number" id="dependents" min="0" value="0" />
+      </div>
+
+      <div class="input-group">
+        <label for="income">Income Amount ($):</label>
+        <input type="number" id="income" required />
+      </div>
+
+      <div class="input-group" id="hoursGroup">
+        <label for="hours">Hours Worked Per Week:</label>
+        <input type="number" id="hours" value="40" />
+      </div>
+
+      <fieldset>
+        <legend>Deductions Per Paycheck</legend>
+        <label>401(k): <input type="number" id="deduct401k" /></label>
+        <label>Health Insurance: <input type="number" id="deductHealth" /></label>
+        <label>Dental Insurance: <input type="number" id="deductDental" /></label>
+        <label>Life and AD&D: <input type="number" id="deductLife" /></label>
+        <label>Disability Insurance: <input type="number" id="deductDisability" /></label>
+        <label>Other Deductions: <input type="number" id="deductOther" /></label>
+      </fieldset>
+
+      <div class="input-group">
+        <label for="untaxableIncome">Untaxable Income ($):</label>
+        <input type="number" id="untaxableIncome" value="0" />
+      </div>
+
+      <button type="submit">Calculate Paycheck</button>
+    </form>
+
+    <div class="ad ad-middle">[AdSense Placeholder - Mid Page]</div>
+
+    <div id="results" class="results hidden">
+      <h2>Results</h2>
+      <p><strong>Gross Pay:</strong> <span id="grossPay">$0.00</span></p>
+      <p><strong>Federal Tax:</strong> <span id="federalTax">$0.00</span></p>
+      <p><strong>State Tax:</strong> <span id="stateTax">$0.00</span></p>
+      <p><strong>Social Security:</strong> <span id="ssTax">$0.00</span></p>
+      <p><strong>Medicare:</strong> <span id="medicareTax">$0.00</span></p>
+      <p><strong>State Disability:</strong> <span id="disabilityTax">$0.00</span></p>
+      <p><strong>Untaxable Income:</strong> <span id="untaxable">$0.00</span></p>
+      <p class="net"><strong>Net Pay:</strong> <span id="netPay">$0.00</span></p>
+    </div>
+
+    <div class="ad ad-bottom">[AdSense Placeholder - Bottom Banner]</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
